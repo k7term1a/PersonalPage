@@ -1,0 +1,109 @@
+cv:
+  name: Kai-Chi Huang
+  headline: M.S. Student in Computer Science · LLM Systems · Kubernetes Scheduling
+  location: Taichung, Taiwan
+  email: kaichi4work@gmail.com
+  phone: tel:+886-909-480-946
+  website: https://hackmd.io/@kaichi
+  social_networks:
+  - network: GitHub
+    username: k7term1a
+  sections:
+    summary:
+    - Graduate student in computer science working on large language model research and infrastructure
+      at NCHC. Hands-on experience with LLM proof-of-concept experiments (model merging, differential
+      privacy), multi-agent data pipelines, computer vision applications, and metaheuristic scheduling
+      on Kubernetes.
+    education:
+    - institution: National Chung Hsing University
+      area: Computer Science and Engineering
+      degree: MS
+      location: Taichung, Taiwan
+      start_date: 2025-09
+      end_date: present
+    - institution: National Taichung University of Education
+      area: Computer Science and Engineering
+      degree: BS
+      location: Taichung, Taiwan
+      start_date: 2021-09
+      end_date: 2025-06
+    experience:
+    - company: National Center for High-performance Computing (NCHC)
+      position: LLM Model Team Intern
+      location: Taiwan
+      start_date: 2025-03
+      end_date: present
+      highlights:
+      - Explored recent research on large language models and implemented proof-of-concept experiments
+        on differential privacy and **model merging**.
+      - Designed and implemented a corpus-collection pipeline using the LAMBDA multi-agent framework for
+        automated **data extraction** and structured storage.
+    - company: Claireye Intelligence Co.
+      position: AI Application Intern
+      location: Taiwan
+      start_date: 2025-02
+      end_date: 2025-06
+      highlights:
+      - Developed proof-of-concept computer vision applications with YOLOv11, including firefighter gear-wearing
+        sequence detection and industrial defect inspection.
+      - Participated in dataset annotation and implemented **OCR-based** information extraction for vision
+        applications.
+    projects:
+    - name: Hybrid Metaheuristic Scheduling for Kubernetes
+      start_date: 2024-11
+      end_date: 2025-02
+      highlights:
+      - Combined Ant Colony Optimization (ACO) with **Grasshopper Optimization** for Kubernetes batch
+        scheduling, evaluated on the **Apache YuniKorn** scheduler.
+      - Grasshopper Optimization accelerated ACO convergence by **nearly 50%**, while ACO improved the
+        solution quality of Grasshopper-based scheduling.
+      - '[github.com/k7term1a/ntcu114-yunikorn-core](https://github.com/k7term1a/ntcu114-yunikorn-core/tree/ntcu114-project)'
+    - name: HF Datasets Extractor with LAMBDA
+      date: 2026-01
+      highlights:
+      - Built a multi-agent pipeline on the LAMBDA framework to **automatically extract** and process
+        datasets from Hugging Face.
+      - Automated dataset retrieval and structured data preparation for LLM corpus construction.
+      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
+    skills:
+    - label: Programming
+      details: Python, C/C++, Java
+    - label: AI & ML
+      details: Large Language Models, Deep Learning (Transformers, LSTMs), Computer Vision (YOLO), Metaheuristic
+        Algorithms (Ant Colony Optimization)
+    - label: Libraries
+      details: PyTorch, Scikit-learn, Pandas, OpenCV
+    - label: Systems & DevOps
+      details: Slurm, Kubernetes, Prometheus, Grafana
+    awards:
+    - label: 1st Place, 2026
+      details: AWS Summit Taipei Hackathon, Shipping & Logistics Track
+    - label: 1st Place, 2026
+      details: Maritime and Port Big Data Competition
+    - label: 3rd Place, 2025
+      details: 4th NCHC High Performance Application Competition (HiPAC)
+    - label: 1st Place, 2024
+      details: 3rd NCHC High Performance Application Competition (HiPAC)
+    - label: Silver Award, 2024
+      details: IMBD National Smart Manufacturing Big Data Analysis Competition
+    - label: 3rd Place, 2023
+      details: Education Big Data Analytics Competition
+design:
+  theme: classic
+  page:
+    size: a4
+    top_margin: 1.2cm
+    bottom_margin: 1.2cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+  typography:
+    font_size:
+      body: 9.2pt
+  entries:
+    date_and_location_width: 4.5cm
+  section_titles:
+    space_above: 0.45cm
+    space_below: 0.15cm
+  sections:
+    space_between_regular_entries: 0.9em
+    space_between_text_based_entries: 0.5em

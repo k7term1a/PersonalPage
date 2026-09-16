@@ -1,0 +1,7 @@
+rendercv_output/
+_site/
+applications/          # 針對特定公司的客製版不放公開 repo（見 README）
+*.pdf
+*.png
+!site/static/*
+.DS_Store

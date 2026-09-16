@@ -1,0 +1,113 @@
+cv:
+  name: 黃楷奇
+  headline: 資工碩士生 · 大型語言模型系統 · Kubernetes 排程
+  location: 台中，台灣
+  email: kaichi4work@gmail.com
+  phone: tel:+886-909-480-946
+  website: https://hackmd.io/@kaichi
+  social_networks:
+  - network: GitHub
+    username: k7term1a
+  sections:
+    個人簡介:
+    - 資訊工程碩士生，於國網中心從事大型語言模型研究與基礎設施相關工作。具備 LLM 概念驗證實驗（模型合併、差分隱私）、多代理資料流程、電腦視覺應用，以及 Kubernetes 啟發式排程的實作經驗。
+    教育背景:
+    - institution: 國立中興大學
+      area: 資訊工程學系
+      degree: 碩士
+      location: 台中
+      start_date: 2025-09
+      end_date: present
+    - institution: 國立台中教育大學
+      area: 資訊工程學系
+      degree: 學士
+      location: 台中
+      start_date: 2021-09
+      end_date: 2025-06
+    工作經驗:
+    - company: 國家高速網路與計算中心（NCHC）
+      position: 大型語言模型團隊 實習生
+      location: 台灣
+      start_date: 2025-03
+      end_date: present
+      highlights:
+      - 研究大型語言模型最新技術並實作概念驗證（PoC），主題包含差分隱私與**模型合併（model merging）**。
+      - 使用 LAMBDA 多代理框架設計並實作語料蒐集流程，用於自動化**資料擷取**與結構化儲存。
+    - company: Claireye Intelligence Co.
+      position: AI 應用實習生
+      location: 台灣
+      start_date: 2025-02
+      end_date: 2025-06
+      highlights:
+      - 使用 YOLOv11 開發電腦視覺概念驗證應用，包括消防裝備穿戴順序偵測與工業缺陷檢測。
+      - 參與資料標註流程，並實作基於 **OCR** 的資訊擷取於視覺應用中。
+    專案經歷:
+    - name: Kubernetes 混合式啟發式排程
+      start_date: 2024-11
+      end_date: 2025-02
+      highlights:
+      - 結合蟻群演算法（ACO）與**蚱蜢最佳化（Grasshopper Optimization）**，用於 Kubernetes 批次排程，並以 **Apache YuniKorn** 排程器進行評估。
+      - 實驗顯示蚱蜢最佳化可將 ACO 收斂速度提升**近 50%**，而 ACO 則提升了蚱蜢演算法的排程品質。
+      - '[github.com/k7term1a/ntcu114-yunikorn-core](https://github.com/k7term1a/ntcu114-yunikorn-core/tree/ntcu114-project)'
+    - name: 基於 LAMBDA 的 HF 資料集擷取器
+      date: 2026-01
+      highlights:
+      - 使用 LAMBDA 框架開發多代理流程，**自動擷取**並處理 Hugging Face 資料集。
+      - 建立資料集取得與結構化整理的**自動化流程**，支援 LLM 語料建構。
+      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
+    技術能力:
+    - label: 程式語言
+      details: Python、C/C++、Java
+    - label: 人工智慧與機器學習
+      details: 大型語言模型（LLMs）、深度學習（Transformers、LSTMs）、電腦視覺（YOLO）、啟發式最佳化演算法（蟻群演算法）
+    - label: 函式庫
+      details: PyTorch、Scikit-learn、Pandas、OpenCV
+    - label: 系統與 DevOps
+      details: Slurm、Kubernetes、Prometheus、Grafana
+    獎項與榮譽:
+    - label: 第一名（2026）
+      details: AWS Summit 黑客松 航運物流組
+    - label: 第一名（2026）
+      details: 航港大數據競賽
+    - label: 第三名（2025）
+      details: 第四屆 NCHC 高效能應用競賽（HiPAC）
+    - label: 第一名（2024）
+      details: 第三屆 NCHC 高效能應用競賽（HiPAC）
+    - label: 銀獎（2024）
+      details: IMBD 全國智慧製造大數據分析競賽
+    - label: 第三名（2023）
+      details: 教育大數據分析競賽
+design:
+  theme: classic
+  page:
+    size: a4
+    top_margin: 1.2cm
+    bottom_margin: 1.2cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+  typography:
+    font_family: Noto Sans CJK TC
+    font_size:
+      body: 9.2pt
+  templates:
+    single_date: YEAR 年 MONTH 月
+    top_note: '*LAST_UPDATED YEAR 年 MONTH 月*'
+    footer: '*NAME -- 第 PAGE_NUMBER / TOTAL_PAGES 頁*'
+  entries:
+    date_and_location_width: 4.5cm
+  section_titles:
+    space_above: 0.45cm
+    space_below: 0.15cm
+  sections:
+    space_between_regular_entries: 0.9em
+    space_between_text_based_entries: 0.5em
+locale:
+  language: mandarin_chinese
+  last_updated: 最後更新於
+  present: 至今
+  month: 個月
+  months: 個月
+  year: 年
+  years: 年
+  phrases:
+    degree_with_area: AREA DEGREE

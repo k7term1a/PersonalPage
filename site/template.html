@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ zh.cv.name }} · {{ en.cv.name }}</title>
+<meta name="description" content="{{ en.cv.headline }}">
+<link rel="icon" type="image/x-icon" href="Pigeon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+{%- macro render(data, lang) %}
+<div class="lang" data-lang="{{ lang }}">
+  <header class="hero">
+    <img class="photo" src="photo.jpg" alt="">
+    <div>
+      <h1>{{ data.cv.name }}</h1>
+      <p class="headline">{{ data.cv.headline }}</p>
+      <p class="contact">
+        <span>{{ data.cv.location }}</span>
+        <a href="mailto:{{ data.cv.email }}">{{ data.cv.email }}</a>
+        {%- for s in data.cv.social_networks %}
+        <a href="https://github.com/{{ s.username }}">github.com/{{ s.username }}</a>
+        {%- endfor %}
+        {%- if data.cv.website %}<a href="{{ data.cv.website }}">{{ data.cv.website | replace('https://','') }}</a>{% endif %}
+      </p>
+      <p class="downloads">
+        {%- if pdfs.get(lang) %}
+        <a class="btn" href="{{ pdfs[lang] }}">{{ '下載 PDF 履歷' if lang == 'zh' else 'Download CV (PDF)' }}</a>
+        {%- endif %}
+        {%- set other = 'en' if lang == 'zh' else 'zh' %}
+        {%- if pdfs.get(other) %}
+        <a class="btn quiet" href="{{ pdfs[other] }}">{{ 'English PDF' if lang == 'zh' else '中文 PDF' }}</a>
+        {%- endif %}
+      </p>
+    </div>
+  </header>
+
+  {%- for sec in data.sections %}
+  <section>
+    <h2>{{ sec.title }}</h2>
+    {%- set ns = namespace(last_year=None) %}
+    {%- for e in sec.entries %}
+      {%- if e.kind == 'text' %}
+      <p class="prose">{{ e.html }}</p>
+      {%- elif e.kind == 'oneline' %}
+      <p class="oneline"><span class="key">{{ e.label }}</span>{{ e.details_html }}</p>
+      {%- else %}
+      <article class="entry{% if e.year and e.year != ns.last_year %} new-year{% endif %}">
+        <div class="rail">{% if e.year and e.year != ns.last_year %}{{ e.year }}{% endif %}</div>
+        {%- set ns.last_year = e.year %}
+        <div class="body">
+          <h3>
+            {%- if e.kind == 'experience' %}{{ e.company }}<span class="role">{{ e.position }}</span>
+            {%- elif e.kind == 'education' %}{{ e.institution }}<span class="role">{{ e.area }}{% if e.degree %}{{ '，' if lang == 'zh' else ', ' }}{{ e.degree }}{% endif %}</span>
+            {%- else %}{{ e.name }}{% endif %}
+          </h3>
+          <p class="meta">{{ e.when }}{% if e.location %} · {{ e.location }}{% endif %}</p>
+          {%- if e.summary %}<p class="prose">{{ e.summary }}</p>{% endif %}
+          {%- if e.highlights %}
+          <ul>{% for h in e.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endif %}
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+</div>
+{%- endmacro %}
+
+<nav class="lang-switch" aria-label="Language">
+  <button type="button" data-set="zh" aria-pressed="true">中文</button>
+  <button type="button" data-set="en" aria-pressed="false">English</button>
+</nav>
+
+<main>
+  {{ render(zh, 'zh') }}
+  {{ render(en, 'en') }}
+</main>
+
+<footer>
+  <p>
+    <span data-lang="zh">內容由 <a href="https://github.com/k7term1a/PersonalPage">resume-*.yaml</a> 自動產生 · 最後更新 {{ updated }}</span>
+    <span data-lang="en">Generated from <a href="https://github.com/k7term1a/PersonalPage">resume-*.yaml</a> · last updated {{ updated }}</span>
+  </p>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btns = document.querySelectorAll('.lang-switch button');
+  function set(lang) {
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang === 'zh' ? 'zh-Hant' : 'en');
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === lang)); });
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.set); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('lang'); } catch (e) {}
+  if (saved === 'en' || saved === 'zh') set(saved);
+  else if (!/^zh/i.test(navigator.language || '')) set('en');
+})();
+</script>
+</body>
+</html>
