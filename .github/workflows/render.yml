@@ -1,0 +1,42 @@
+# push 到 main：渲染中英 PDF → 產生個人網頁 → 部署到 GitHub Pages（Settings → Pages → Source: GitHub Actions）
+# 打 tag v*：另外把 PDF 附到 GitHub Release
+name: build-and-deploy
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install "rendercv[full]" jinja2 pyyaml
+      - run: bash fonts/get-fonts.sh
+      - run: rendercv render resume-en.yaml && rendercv render resume-zh.yaml
+      - run: python3 site/build.py --out _site
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rendercv_output/*.pdf
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
