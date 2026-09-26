@@ -49,6 +49,18 @@ cv:
       - Participated in dataset annotation and implemented **OCR-based** information extraction for vision
         applications.
     projects:
+    - name: Port Vessel Scheduling Decision PoC (1st place, Maritime & Port Big Data Competition)
+      start_date: 2026-07
+      end_date: 2026-08
+      highlights:
+      - Typhoon pre-closure evacuation ordering with a **Soft Mixture-of-Experts PPO** policy conditioned on count/tonnage/risk preferences; action masks enforce closure deadline and tug capacity. On 900 held-out paired scenarios, RL beat FCFS at **15/15 preference points** (+2.46% avg.) with zero safety violations.
+      - Kaohsiung port capacity-shock what-if with **NSGA-II** multi-objective scheduling cross-checked by CP-SAT; on a 20-vessel case, total merchant waiting **−4.5%** and makespan **−10.8%** vs. the rule baseline.
+      - '[github.com/NCHU-ICTALab/typhoon-evacuation-rl](https://github.com/NCHU-ICTALab/typhoon-evacuation-rl) · [port-resilience-whatif](https://github.com/NCHU-ICTALab/port-resilience-whatif)'
+    - name: HPC Cluster Setup and Performance Tuning (HiPAC 2024 champion entry)
+      date: 2024
+      highlights:
+      - Six-person team built an **Infiniband + multi-GPU** cluster with NUMA binding, MPI tuning and **Prometheus / Grafana** monitoring; I owned parameter optimization for the benchmark and application tasks.
+      - Wrote automation scripts to record and analyze parameter-performance relationships, tuned **HPL / HPCG**, and built PIConGPU and NAMD from source with optimized multi-node CUDA settings.
     - name: Hybrid Metaheuristic Scheduling for Kubernetes
       start_date: 2024-11
       end_date: 2025-02
@@ -69,25 +81,25 @@ cv:
     - label: Programming
       details: Python, C/C++, Java
     - label: AI & ML
-      details: Large Language Models, Deep Learning (Transformers, LSTMs), Computer Vision (YOLO), Metaheuristic
-        Algorithms (Ant Colony Optimization)
+      details: Large Language Models, Deep Learning (Transformers, LSTMs, CNNs), Reinforcement Learning (PPO, multi-objective),
+        Computer Vision (YOLO), Metaheuristics (Ant Colony Optimization, NSGA-II)
     - label: Libraries
-      details: PyTorch, Scikit-learn, Pandas, OpenCV
-    - label: Systems & DevOps
-      details: Slurm, Kubernetes, Prometheus, Grafana
+      details: PyTorch, Scikit-learn, XGBoost / CatBoost, Pandas, OpenCV
+    - label: Systems & HPC
+      details: Slurm, Kubernetes, Prometheus, Grafana, MPI, CUDA, Infiniband, HPL/HPCG
     awards:
     - label: 1st Place, 2026
-      details: AWS Summit Taipei Hackathon, Shipping & Logistics Track
+      details: AWS Summit Taipei 2026 AI Hackathon, Shipping & Logistics Track (Yang Ming challenge) — fleet energy-efficiency platform; owned data cleaning and the CatBoost fuel model (3.34% WAPE)
     - label: 1st Place, 2026
-      details: Maritime and Port Big Data Competition
+      details: 6th Maritime & Port Big Data Innovation Competition, Student Group (Taiwan Maritime and Port Bureau, team SpaceY) — owned the typhoon-evacuation RL and port-resilience NSGA-II subsystems
     - label: 3rd Place, 2025
-      details: 4th NCHC High Performance Application Competition (HiPAC)
+      details: 4th NCHC HiPAC (High Performance Application Competition) — owned Slurm setup with DCGM/Prometheus/Grafana monitoring, LAMMPS tuning and the SU2 hidden task
     - label: 1st Place, 2024
-      details: 3rd NCHC High Performance Application Competition (HiPAC)
+      details: 3rd NCHC HiPAC — GPU/Infiniband cluster setup with HPL, HPCG and NAMD tuning
     - label: Silver Award, 2024
-      details: IMBD National Smart Manufacturing Big Data Analysis Competition
+      details: 2024 National Smart Manufacturing Big Data Analysis Competition (IMBD, 70+ teams) — 4-class surface-defect CNN; owned data augmentation and training scripts, F1 0.994
     - label: 3rd Place, 2023
-      details: Education Big Data Analytics Competition
+      details: 2023 Education Big Data Analytics Competition (Ministry of Education, 40+ teams nationwide) — predicting learning outcomes from online learning behavior with early warnings, XGBoost 81.8% accuracy
 design:
   theme: classic
   page:
