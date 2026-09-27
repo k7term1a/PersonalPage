@@ -42,6 +42,18 @@ cv:
       - 使用 YOLOv11 開發電腦視覺概念驗證應用，包括消防裝備穿戴順序偵測與工業缺陷檢測。
       - 參與資料標註流程，並實作基於 **OCR** 的資訊擷取於視覺應用中。
     專案經歷:
+    - name: 港口船舶排程決策 PoC（航港大數據競賽 第一名作品）
+      start_date: 2026-07
+      end_date: 2026-08
+      highlights:
+      - 颱風封港前撤離排序：以 **Soft Mixture-of-Experts PPO** 依「艘數／噸位／風險」三維偏好產生 Pareto 排程候選，action mask 硬限制封港截止與拖船容量；held-out 900 組配對中 **15/15 偏好點優於 FCFS**（平均 +2.46%），安全違規 0。
+      - 高雄港產能衝擊 what-if：**NSGA-II** 多目標排程並以 CP-SAT 交叉驗證，20 艘案例商船總等待 **−4.5%**、排程完成時間 **−10.8%**。
+      - '[github.com/NCHU-ICTALab/typhoon-evacuation-rl](https://github.com/NCHU-ICTALab/typhoon-evacuation-rl) · [port-resilience-whatif](https://github.com/NCHU-ICTALab/port-resilience-whatif)'
+    - name: HPC 叢集建置與效能調校（HiPAC 2024 冠軍作品）
+      date: 2024
+      highlights:
+      - 六人團隊自建 **Infiniband + 多 GPU** 叢集，含 NUMA binding、MPI 調校與 **Prometheus / Grafana** 監控；我負責標準題與應用題的參數優化。
+      - 撰寫自動化腳本記錄並分析參數與效能關聯，調校 **HPL / HPCG** benchmark，並從原始碼建置 PIConGPU 與 NAMD、優化多節點 CUDA 執行參數。
     - name: Kubernetes 混合式啟發式排程
       start_date: 2024-11
       end_date: 2025-02
@@ -59,24 +71,24 @@ cv:
     - label: 程式語言
       details: Python、C/C++、Java
     - label: 人工智慧與機器學習
-      details: 大型語言模型（LLMs）、深度學習（Transformers、LSTMs）、電腦視覺（YOLO）、啟發式最佳化演算法（蟻群演算法）
+      details: 大型語言模型（LLMs）、深度學習（Transformers、LSTMs、CNN）、強化學習（PPO、多目標）、電腦視覺（YOLO）、啟發式最佳化（蟻群演算法、NSGA-II）
     - label: 函式庫
-      details: PyTorch、Scikit-learn、Pandas、OpenCV
-    - label: 系統與 DevOps
-      details: Slurm、Kubernetes、Prometheus、Grafana
+      details: PyTorch、Scikit-learn、XGBoost / CatBoost、Pandas、OpenCV
+    - label: 系統與 HPC
+      details: Slurm、Kubernetes、Prometheus、Grafana、MPI、CUDA、Infiniband、HPL/HPCG
     獎項與榮譽:
     - label: 第一名（2026）
-      details: AWS Summit 黑客松 航運物流組
+      details: AWS Summit Taipei 2026 AI Hackathon 航運物流組（陽明海運題）— 船隊能效決策平台，負責資料清洗與 CatBoost 油耗模型（WAPE 3.34%）
     - label: 第一名（2026）
-      details: 航港大數據競賽
-    - label: 第三名（2025）
-      details: 第四屆 NCHC 高效能應用競賽（HiPAC）
-    - label: 第一名（2024）
-      details: 第三屆 NCHC 高效能應用競賽（HiPAC）
+      details: 第六屆航港大數據創意應用競賽 學生組（交通部航港局，隊名 SpaceY）— 負責颱風撤離 RL 與港口韌性 NSGA-II 兩個子系統
+    - label: 季軍（2025）
+      details: 第四屆國網盃應用程式效能優化競賽（HiPAC 2025）— 負責 Slurm 建置與 DCGM/Prometheus/Grafana 監控、LAMMPS 調參、SU2 隱藏題
+    - label: 冠軍（2024）
+      details: 第三屆國網盃應用程式效能優化競賽（HiPAC 2024）— GPU/Infiniband 叢集建置與 HPL、HPCG、NAMD 調校
     - label: 銀獎（2024）
-      details: IMBD 全國智慧製造大數據分析競賽
+      details: 2024 全國智慧製造大數據分析競賽（IMBD，70 餘隊）— 表面瑕疵四分類 CNN，負責資料增強與訓練腳本，F1 0.994
     - label: 第三名（2023）
-      details: 教育大數據分析競賽
+      details: 2023 教育大數據分析競賽（教育部，全國 40 餘隊）— 以線上學習行為預測學習成效並提供預警，XGBoost 準確率 81.8%
 design:
   theme: classic
   page:
