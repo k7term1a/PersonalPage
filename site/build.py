@@ -70,11 +70,39 @@ def classify(item):
     return "other"
 
 
+PROJECT_SECTIONS = ("projects", "專案經歷")
+DATE_KEYS = ("date", "start_date", "end_date")
+
+
+def sort_key(item) -> str:
+    """最近的在前：和時間軸年份標記（year_of）一樣用開始日期，年份才會單調遞減。"""
+    if not isinstance(item, dict):
+        return ""
+    return str(item.get("date") or item.get("start_date") or "")
+
+
+def load_timeline(lang: str) -> list:
+    """site/timeline.yaml：只在網頁時間軸出現的條目（PDF 不放）。"""
+    f = SITE / "timeline.yaml"
+    if not f.exists():
+        return []
+    out = []
+    for it in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
+        e = dict(it[lang])
+        for k in DATE_KEYS:
+            if k in it:
+                e[k] = str(it[k])
+        out.append(e)
+    return out
+
+
 def load(lang: str) -> dict:
     d = yaml.safe_load((ROOT / f"resume-{lang}.yaml").read_text(encoding="utf-8"))
     cv = d["cv"]
     sections = []
     for title, items in cv.get("sections", {}).items():
+        if title in PROJECT_SECTIONS:
+            items = sorted(list(items) + load_timeline(lang), key=sort_key, reverse=True)
         entries = []
         for it in items:
             kind = classify(it)

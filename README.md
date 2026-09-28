@@ -10,6 +10,7 @@ resume-en.yaml            英文主履歷（RenderCV 格式，唯一真相來源
 resume-zh.yaml            繁中主履歷
 projects/*.md             證據庫：每個成就的完整背景、數字來源、待補事項
 site/                     個人網頁產生器：build.py 讀兩份 YAML → index.html（中英切換、下載 PDF）
+site/timeline.yaml        只在網頁時間軸出現的專案（PDF 維持一頁不放），build.py 依日期合併
 fonts/                    Noto Sans CJK TC（繁中 PDF 用）
 .github/workflows/        CI：render PDF + build site + deploy Pages；tag v* 時發 Release
 ```
