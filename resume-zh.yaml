@@ -49,11 +49,12 @@ cv:
       - 颱風封港前撤離排序：以 **Soft Mixture-of-Experts PPO** 依「艘數／噸位／風險」三維偏好產生 Pareto 排程候選，action mask 硬限制封港截止與拖船容量；held-out 900 組配對中 **15/15 偏好點優於 FCFS**（平均 +2.46%），安全違規 0。
       - 高雄港產能衝擊 what-if：**NSGA-II** 多目標排程並以 CP-SAT 交叉驗證，20 艘案例商船總等待 **−4.5%**、排程完成時間 **−10.8%**。
       - '[github.com/NCHU-ICTALab/typhoon-evacuation-rl](https://github.com/NCHU-ICTALab/typhoon-evacuation-rl) · [port-resilience-whatif](https://github.com/NCHU-ICTALab/port-resilience-whatif)'
-    - name: HPC 叢集建置與效能調校（HiPAC 2024 冠軍作品）
-      date: 2024
+    - name: 基於 LAMBDA 的 HF 資料集擷取器
+      date: 2026-01
       highlights:
-      - 六人團隊自建 **Infiniband + 多 GPU** 叢集，含 NUMA binding、MPI 調校與 **Prometheus / Grafana** 監控；我負責標準題與應用題的參數優化。
-      - 撰寫自動化腳本記錄並分析參數與效能關聯，調校 **HPL / HPCG** benchmark，並從原始碼建置 PIConGPU 與 NAMD、優化多節點 CUDA 執行參數。
+      - 使用 LAMBDA 框架開發多代理流程，**自動擷取**並處理 Hugging Face 資料集。
+      - 建立資料集取得與結構化整理的**自動化流程**，支援 LLM 語料建構。
+      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
     - name: Kubernetes 混合式啟發式排程
       start_date: 2024-11
       end_date: 2025-02
@@ -61,12 +62,11 @@ cv:
       - 結合蟻群演算法（ACO）與**蚱蜢最佳化（Grasshopper Optimization）**，用於 Kubernetes 批次排程，並以 **Apache YuniKorn** 排程器進行評估。
       - 實驗顯示蚱蜢最佳化可將 ACO 收斂速度提升**近 50%**，而 ACO 則提升了蚱蜢演算法的排程品質。
       - '[github.com/k7term1a/ntcu114-yunikorn-core](https://github.com/k7term1a/ntcu114-yunikorn-core/tree/ntcu114-project)'
-    - name: 基於 LAMBDA 的 HF 資料集擷取器
-      date: 2026-01
+    - name: HPC 叢集建置與效能調校（HiPAC 2024 冠軍作品）
+      date: 2024
       highlights:
-      - 使用 LAMBDA 框架開發多代理流程，**自動擷取**並處理 Hugging Face 資料集。
-      - 建立資料集取得與結構化整理的**自動化流程**，支援 LLM 語料建構。
-      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
+      - 六人團隊自建 **Infiniband + 多 GPU** 叢集，含 NUMA binding、MPI 調校與 **Prometheus / Grafana** 監控；我負責標準題與應用題的參數優化。
+      - 撰寫自動化腳本記錄並分析參數與效能關聯，調校 **HPL / HPCG** benchmark，並從原始碼建置 PIConGPU 與 NAMD、優化多節點 CUDA 執行參數。
     技術能力:
     - label: 程式語言
       details: Python、C/C++、Java

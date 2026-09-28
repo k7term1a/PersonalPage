@@ -1,0 +1,54 @@
+# 只出現在個人網頁「專案經歷」時間軸的條目。
+# PDF 履歷要維持一頁，所以不放這些；build.py 會把它們和 resume-*.yaml 的專案合併，依日期由新到舊排序。
+# 每一句都要能對回 projects/*.md 的證據檔。
+
+- date: 2026-07
+  zh:
+    name: 船隊能效決策平台（AWS Summit Taipei 2026 AI Hackathon 航運物流組 第一名）
+    highlights:
+    - 負責資料清洗：Noon Reports 21,282 筆經去重與衝突群組處理，整理出 8,057 筆訓練資料，多燃料依低位熱值換算為 VLSFO 等效日油耗。
+    - 負責油耗模型：設計 46 個推進與航速特徵，比較四種建模策略，**CatBoost** 最佳（MAE 2.39 MT、**WAPE 3.34%**、R² 0.984），並以 SHAP 解釋主要影響因子。
+  en:
+    name: Fleet Energy-Efficiency Platform (1st place, AWS Summit Taipei 2026 AI Hackathon, Shipping & Logistics)
+    highlights:
+    - Owned data cleaning — deduplicated 21,282 noon reports and resolved conflicting ship-day groups into 8,057 training rows, converting multi-fuel consumption to VLSFO-equivalent daily FOC.
+    - Owned the fuel model — engineered 46 propulsion and speed features and compared four modeling strategies; **CatBoost** won with MAE 2.39 MT, **3.34% WAPE** and R² 0.984, explained with SHAP.
+
+- date: 2025
+  zh:
+    name: HPC 叢集監控與應用調校（HiPAC 2025 季軍）
+    highlights:
+    - 負責 **Slurm** 建置與效能監控：DCGM Exporter 搭配 **Prometheus / Grafana**，並與 Slurm job 整合。
+    - 負責 **LAMMPS** 調參，以 Python 自動產生 sbatch 與 input 檔掃參數；現場讀文件建置 SU2 隱藏題（MPI / MKL / CUDA）。
+    - '[hackmd.io/@kaichi/Sy9UKzCUex](https://hackmd.io/@kaichi/Sy9UKzCUex)'
+  en:
+    name: HPC Cluster Monitoring and Application Tuning (3rd place, HiPAC 2025)
+    highlights:
+    - Owned **Slurm** setup and performance monitoring with DCGM Exporter and **Prometheus / Grafana**, integrated with Slurm jobs.
+    - Owned **LAMMPS** tuning with Python scripts that generate sbatch and input files for parameter sweeps; built the SU2 hidden task (MPI / MKL / CUDA) on site from the docs.
+    - '[hackmd.io/@kaichi/Sy9UKzCUex](https://hackmd.io/@kaichi/Sy9UKzCUex)'
+
+- date: 2024-11
+  zh:
+    name: 工業表面瑕疵分類（IMBD 2024 銀獎）
+    highlights:
+    - 四人團隊，負責資料增強與訓練腳本：以翻轉與對切翻轉將 2,400 張的少數類別擴增至約 21,600 張，處理嚴重類別不平衡。
+    - 以 PyTorch 實作 VGG 式 CNN 四分類，測試集 **F1 0.994**、Accuracy 0.996。
+  en:
+    name: Industrial Surface-Defect Classification (Silver Award, IMBD 2024)
+    highlights:
+    - Four-person team; owned data augmentation and training scripts, expanding a 2,400-image minority class to about 21,600 with flips and split-and-flip to fix severe class imbalance.
+    - Implemented a VGG-style 4-class CNN in PyTorch reaching **F1 0.994** and 0.996 accuracy on the test set.
+
+- start_date: 2023-10
+  end_date: 2023-12
+  zh:
+    name: 線上學習行為與成效預測（2023 教育大數據分析競賽 第三名）
+    highlights:
+    - 以 Pandas、Matplotlib 前處理多平台學習日誌，建立答對率、行為次數與行為時序三類特徵。
+    - 以 SVM、ANN、XGBoost 預測成績區段（XGBoost 準確率 81.8%），提出依行為模式預警並給建議的方法，全國 40 餘隊中獲第三名。
+  en:
+    name: Online Learning Behavior and Outcome Prediction (3rd place, 2023 Education Big Data Competition)
+    highlights:
+    - Preprocessed multi-platform learning logs with Pandas and Matplotlib into score, action-count and action-sequence features.
+    - Predicted score bands with SVM, ANN and XGBoost (81.8% accuracy) and proposed behavior-based early warnings and advice; 3rd of 40+ teams nationwide.
