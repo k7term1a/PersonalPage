@@ -38,7 +38,11 @@
 - 觀察 Qwen、DeepSeek 對閩南語題目的回答；觀察 Gemma 3、Llama 4 的 embedding 數值偏差
 - 以 `distilabel` 產生合成資料，記錄 cache、batch size 與生成數等參數影響；多輪對話生成格式實驗
 
-## 7. 語料蒐集流程
+## 7. 影像／影片辨識與 MCP（2026，國網指派）
+- 筆記標題：影像辨識服務 survey、DINOv3、DINOv3 K400 與 UAS 比較、VideoMAE 訓練了解與相關優化、projector 訓練相關、K600 影片辨識 MCP、K600 辨識系統減少延遲、Model Context Protocol (MCP) 技術報告、Gemma 4 家族介紹
+- 待補：實際做了什麼（訓練？部署成 MCP 服務？延遲降低多少？）
+
+## 8. 語料蒐集流程
 - 見 hf-extractor-lambda.md；並整理「繁體中文資料集彙整」（CC、維基、政府文件、新聞等來源）
 
 ## 環境
