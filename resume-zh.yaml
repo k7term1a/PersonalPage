@@ -31,7 +31,9 @@ cv:
       start_date: 2025-03
       end_date: present
       highlights:
-      - 研究大型語言模型最新技術並實作概念驗證（PoC），主題包含差分隱私與**模型合併（model merging）**。
+      - 進行 LLM **文獻 survey**，涵蓋語料建構、指令資料篩選與合成、繁中評測、災難性遺忘與安全對齊，並實作**模型合併（mergekit）**與差分隱私相關 PoC。
+      - 仿 FineWeb-Edu 建立繁中教育語料分類流程：以 Llama3-70B 標記樣本，訓練 EmbeddingGemma-300m 分類器。
+      - 在國網 VM 自架 gitlab-runner，建立 **GitLab CI/CD** 流程，自動比對 Notion 紀錄、備份 Hugging Face 資料集並回寫狀態。
       - 使用 LAMBDA 多代理框架設計並實作語料蒐集流程，用於自動化**資料擷取**與結構化儲存。
     - company: Claireye Intelligence Co.
       position: AI 應用實習生
