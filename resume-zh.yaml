@@ -35,6 +35,7 @@ cv:
       - 仿 FineWeb-Edu 建立繁中教育語料分類流程：以 Llama3-70B 標記樣本，訓練 EmbeddingGemma-300m 分類器。
       - 在國網 VM 自架 gitlab-runner，建立 **GitLab CI/CD** 流程，自動比對 Notion 紀錄、備份 Hugging Face 資料集並回寫狀態。
       - 使用 LAMBDA 多代理框架設計並實作語料蒐集流程，用於自動化**資料擷取**與結構化儲存。
+      - 以 Dify Agent 透過 **MCP** 串接 Kinetics-600 影片動作辨識服務；分析延遲瓶頸後將端到端延遲 p50 由 26.3 秒降至 **10.8 秒（−59%）**，top-5 預測一致率維持 100%。
     - company: Claireye Intelligence Co.
       position: AI 應用實習生
       location: 台灣

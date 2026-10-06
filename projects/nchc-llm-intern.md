@@ -22,7 +22,8 @@
 ## 3. 繁中教育語料分類器 PoC（類 FineWeb-Edu）
 - 參考 FineWeb-Edu 流程：以 `Llama3-70B` 提示詞標記樣本是否適合教育主題 → 訓練分類器
 - 資料：`jed351/Traditional-Chinese-Common-Crawl-Filtered`（768 GB，受限 100 GB 配額先取 30 GB，其中 3 GB 作分類器訓練樣本），下載時過濾過短／過長樣本並 hash 去重
-- 分類器 backbone：`EmbeddingGemma-300m`
+- 分類器 backbone：`EmbeddingGemma-300m`，加分類頭；抽樣 10,000 筆標記資料檢視三類分布
+- 結果：三分類正確率約 70%（參考作品 FineWeb-Edu-zhtw-Classifier 為 0.809）
 - 筆記：「類 fineweb 實作」
 
 ## 4. 模型合併（model merging）PoC
@@ -39,17 +40,27 @@
 - 以 `distilabel` 產生合成資料，記錄 cache、batch size 與生成數等參數影響；多輪對話生成格式實驗
 
 ## 7. 影像／影片辨識與 MCP（2026，國網指派）
-- 筆記標題：影像辨識服務 survey、DINOv3、DINOv3 K400 與 UAS 比較、VideoMAE 訓練了解與相關優化、projector 訓練相關、K600 影片辨識 MCP、K600 辨識系統減少延遲、Model Context Protocol (MCP) 技術報告、Gemma 4 家族介紹
-- 待補：實際做了什麼（訓練？部署成 MCP 服務？延遲降低多少？）
+- **Dify Agent + MCP 影片辨識**：使用者在 Dify 上傳影片並以自然語言要求分類，ReAct Agent 節點透過自架 MCP server 呼叫 K600（Kinetics-600）動作辨識推論服務；Agent 使用國網自架 OpenAI 相容 LLM 端點。處理過 Dify 相對 URL、簽名參數被覆蓋、Docker 連 host、zombie container 等問題（筆記「K600 影片辨識 MCP」）
+- **K600 端到端延遲優化**：拆解延遲（錄製分段窗約 20 s 為主宰項、輪詢 2.5 s、前處理 p50 2.3 s、推論 p50 1.1 s），將錄製窗由 20 s 縮至 5 s：
+  - e2e p50 **26.3 s → 10.8 s（−59%）**，p90 28.3 s → 12.7 s
+  - 前處理 p50 2.39 s → 1.62 s
+  - 準確度：top-5 一致率 100%、top-1 一致率 87.5%（140/160），top-1 信心 p50 46.8% → 48.7%
+  - 筆記「K600 辨識系統減少延遲」
+- **影片模型實驗**：VideoMAE v2 / K710 多片段推論與分類頭（Linear / MLP、+LayerNorm）比較，v2 MLP + LN top-1 54.5% → 56.5%；推論改為只解碼需要的幀、batch 合併 forward、ThreadPool 並行前處理
+- **研究規劃與 survey**：DINOv3 與 Video Swin Transformer 在 K400 的訓練差異比較；規劃 Video Swin → MLP Projector → Gemma-4-E4B 的影片 VLM 兩階段訓練（模態對齊、指令微調）；MCP 技術報告；影像辨識服務 survey；Gemma 4 家族介紹
+- **資料記錄改版 survey**（2026-09）：評估可在 GitLab CI / Pages / Package Registry + MinIO 上運作、無需常駐服務的資料集紀錄方案（HF Hub datasets、Croissant、Datasheets/Data Cards 等）
 
 ## 8. 語料蒐集流程
 - 見 hf-extractor-lambda.md；並整理「繁體中文資料集彙整」（CC、維基、政府文件、新聞等來源）
 
 ## 環境
 - 國網 VM：NVIDIA driver、CUDA 12.8 / 11.8、Environment Modules 建置（筆記「nchc vm」）
+- 資料生成 pipeline（`NCHC_data_pipeline.sh`）相依性除錯：逐版測試 pydantic、openai 等套件找出可用版本範圍（筆記「NCHC shell 腳本套件版本問題」）
 
 ## 待補
-- 模型合併與 FineWeb 分類器的最終數字（準確率、分數變化）
+- 模型合併的分數變化（筆記只有截圖）
+- CI/CD 實際備份的資料集數量與容量
+- LAMBDA 語料流程處理的資料集數量
 
 ## 關鍵字
 LLM research, literature survey, data curation, FineWeb-Edu, classifier, model merging, mergekit, differential privacy, GitLab CI/CD, gitlab-runner, Hugging Face, Notion API, distilabel, evaluation, TMMLU+
