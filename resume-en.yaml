@@ -1,6 +1,6 @@
 cv:
   name: Kai-Chi Huang
-  headline: M.S. Student in Computer Science · LLM Systems · Kubernetes Scheduling
+  headline: M.S. Student in Computer Science · Crowd Flow Analysis · AI & HPC
   location: Taichung, Taiwan
   email: kaichi4work@gmail.com
   phone: tel:+886-909-480-946
@@ -10,10 +10,9 @@ cv:
     username: k7term1a
   sections:
     summary:
-    - Graduate student in computer science working on large language model research and infrastructure
-      at NCHC. Hands-on experience with LLM proof-of-concept experiments (model merging, differential
-      privacy), multi-agent data pipelines, computer vision applications, and metaheuristic scheduling
-      on Kubernetes.
+    - M.S. student in computer science researching crowd flow analysis. Intern at NCHC working on large language
+      models and video recognition; experienced in reinforcement-learning scheduling, multi-objective optimization
+      and HPC cluster setup.
     education:
     - institution: National Chung Hsing University
       area: Computer Science and Engineering
@@ -34,18 +33,13 @@ cv:
       start_date: 2025-03
       end_date: present
       highlights:
-      - Conducted an LLM **literature survey** spanning corpus construction, instruction-data selection and
-        synthesis, Traditional Chinese evaluation, catastrophic forgetting and safety alignment; built PoCs
-        on **model merging (mergekit)** and differential privacy.
-      - Built a FineWeb-Edu-style Traditional Chinese educational-text classifier, labeling samples with
-        Llama3-70B and training an EmbeddingGemma-300m classifier.
-      - Self-hosted a gitlab-runner on an NCHC VM and built a **GitLab CI/CD** pipeline that checks Notion
-        records, backs up Hugging Face datasets and writes status back.
-      - Designed and implemented a corpus-collection pipeline using the LAMBDA multi-agent framework for
-        automated **data extraction** and structured storage.
-      - Connected a Kinetics-600 video action-recognition service to a Dify agent via **MCP**; profiled
-        the latency path and cut end-to-end p50 latency from 26.3 s to **10.8 s (−59%)** while keeping
-        100% top-5 prediction agreement.
+      - Conducted an LLM **literature survey** (corpus construction, instruction-data synthesis, Traditional Chinese
+        evaluation, catastrophic forgetting, safety alignment) and built PoCs on **model merging (mergekit)** and a
+        FineWeb-Edu-style Traditional Chinese educational-text classifier.
+      - Self-hosted a gitlab-runner and built a **GitLab CI/CD** pipeline that checks Notion records and backs up
+        Hugging Face datasets; built a corpus-collection pipeline on the LAMBDA multi-agent framework.
+      - Connected a video action-recognition service to a Dify agent via **MCP**; profiled the latency path and cut
+        end-to-end p50 latency from 26.3 s to **10.8 s (−59%)**.
     - company: Claireye Intelligence Co.
       position: AI Application Intern
       location: Taiwan
@@ -64,13 +58,6 @@ cv:
       - Typhoon pre-closure evacuation ordering with a **Soft Mixture-of-Experts PPO** policy conditioned on count/tonnage/risk preferences; action masks enforce closure deadline and tug capacity. On 900 held-out paired scenarios, RL beat FCFS at **15/15 preference points** (+2.46% avg.) with zero safety violations.
       - Kaohsiung port capacity-shock what-if with **NSGA-II** multi-objective scheduling cross-checked by CP-SAT; on a 20-vessel case, total merchant waiting **−4.5%** and makespan **−10.8%** vs. the rule baseline.
       - '[github.com/NCHU-ICTALab/typhoon-evacuation-rl](https://github.com/NCHU-ICTALab/typhoon-evacuation-rl) · [port-resilience-whatif](https://github.com/NCHU-ICTALab/port-resilience-whatif)'
-    - name: HF Datasets Extractor with LAMBDA
-      date: 2026-01
-      highlights:
-      - Built a multi-agent pipeline on the LAMBDA framework to **automatically extract** and process
-        datasets from Hugging Face.
-      - Automated dataset retrieval and structured data preparation for LLM corpus construction.
-      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
     - name: Hybrid Metaheuristic Scheduling for Kubernetes
       start_date: 2024-11
       end_date: 2025-02
@@ -80,11 +67,6 @@ cv:
       - Grasshopper Optimization accelerated ACO convergence by **nearly 50%**, while ACO improved the
         solution quality of Grasshopper-based scheduling.
       - '[github.com/k7term1a/ntcu114-yunikorn-core](https://github.com/k7term1a/ntcu114-yunikorn-core/tree/ntcu114-project)'
-    - name: HPC Cluster Setup and Performance Tuning (HiPAC 2024 champion entry)
-      date: 2024
-      highlights:
-      - Six-person team built an **Infiniband + multi-GPU** cluster with NUMA binding, MPI tuning and **Prometheus / Grafana** monitoring; I owned parameter optimization for the benchmark and application tasks.
-      - Wrote automation scripts to record and analyze parameter-performance relationships, tuned **HPL / HPCG**, and built PIConGPU and NAMD from source with optimized multi-node CUDA settings.
     skills:
     - label: Programming
       details: Python, C/C++, Java

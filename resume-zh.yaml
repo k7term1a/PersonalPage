@@ -1,6 +1,6 @@
 cv:
   name: 黃楷奇
-  headline: 資工碩士生 · 大型語言模型系統 · Kubernetes 排程
+  headline: 資工碩士生 · 人流分析 · AI 與高效能運算
   location: 台中，台灣
   email: kaichi4work@gmail.com
   phone: tel:+886-909-480-946
@@ -10,7 +10,7 @@ cv:
     username: k7term1a
   sections:
     個人簡介:
-    - 資訊工程碩士生，於國網中心從事大型語言模型研究與基礎設施相關工作。具備 LLM 概念驗證實驗（模型合併、差分隱私）、多代理資料流程、電腦視覺應用，以及 Kubernetes 啟發式排程的實作經驗。
+    - 資訊工程碩士生，研究方向為人流分析。於國網中心實習，從事大型語言模型與影像辨識相關研究及工程；具強化學習排程、多目標最佳化與 HPC 叢集建置經驗。
     教育背景:
     - institution: 國立中興大學
       area: 資訊工程學系
@@ -31,11 +31,9 @@ cv:
       start_date: 2025-03
       end_date: present
       highlights:
-      - 進行 LLM **文獻 survey**，涵蓋語料建構、指令資料篩選與合成、繁中評測、災難性遺忘與安全對齊，並實作**模型合併（mergekit）**與差分隱私相關 PoC。
-      - 仿 FineWeb-Edu 建立繁中教育語料分類流程：以 Llama3-70B 標記樣本，訓練 EmbeddingGemma-300m 分類器。
-      - 在國網 VM 自架 gitlab-runner，建立 **GitLab CI/CD** 流程，自動比對 Notion 紀錄、備份 Hugging Face 資料集並回寫狀態。
-      - 使用 LAMBDA 多代理框架設計並實作語料蒐集流程，用於自動化**資料擷取**與結構化儲存。
-      - 以 Dify Agent 透過 **MCP** 串接 Kinetics-600 影片動作辨識服務；分析延遲瓶頸後將端到端延遲 p50 由 26.3 秒降至 **10.8 秒（−59%）**，top-5 預測一致率維持 100%。
+      - 進行 LLM **文獻 survey**（語料建構、指令資料合成、繁中評測、災難性遺忘、安全對齊），並實作**模型合併（mergekit）**與仿 FineWeb-Edu 的繁中教育語料分類器 PoC。
+      - 自架 gitlab-runner 建立 **GitLab CI/CD**，自動比對 Notion 紀錄並備份 Hugging Face 資料集；以 LAMBDA 多代理框架建立語料蒐集流程。
+      - 以 Dify Agent 透過 **MCP** 串接影片動作辨識服務，分析延遲瓶頸後將端到端延遲 p50 由 26.3 秒降至 **10.8 秒（−59%）**。
     - company: Claireye Intelligence Co.
       position: AI 應用實習生
       location: 台灣
@@ -52,12 +50,6 @@ cv:
       - 颱風封港前撤離排序：以 **Soft Mixture-of-Experts PPO** 依「艘數／噸位／風險」三維偏好產生 Pareto 排程候選，action mask 硬限制封港截止與拖船容量；held-out 900 組配對中 **15/15 偏好點優於 FCFS**（平均 +2.46%），安全違規 0。
       - 高雄港產能衝擊 what-if：**NSGA-II** 多目標排程並以 CP-SAT 交叉驗證，20 艘案例商船總等待 **−4.5%**、排程完成時間 **−10.8%**。
       - '[github.com/NCHU-ICTALab/typhoon-evacuation-rl](https://github.com/NCHU-ICTALab/typhoon-evacuation-rl) · [port-resilience-whatif](https://github.com/NCHU-ICTALab/port-resilience-whatif)'
-    - name: 基於 LAMBDA 的 HF 資料集擷取器
-      date: 2026-01
-      highlights:
-      - 使用 LAMBDA 框架開發多代理流程，**自動擷取**並處理 Hugging Face 資料集。
-      - 建立資料集取得與結構化整理的**自動化流程**，支援 LLM 語料建構。
-      - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
     - name: Kubernetes 混合式啟發式排程
       start_date: 2024-11
       end_date: 2025-02
@@ -65,11 +57,6 @@ cv:
       - 結合蟻群演算法（ACO）與**蚱蜢最佳化（Grasshopper Optimization）**，用於 Kubernetes 批次排程，並以 **Apache YuniKorn** 排程器進行評估。
       - 實驗顯示蚱蜢最佳化可將 ACO 收斂速度提升**近 50%**，而 ACO 則提升了蚱蜢演算法的排程品質。
       - '[github.com/k7term1a/ntcu114-yunikorn-core](https://github.com/k7term1a/ntcu114-yunikorn-core/tree/ntcu114-project)'
-    - name: HPC 叢集建置與效能調校（HiPAC 2024 冠軍作品）
-      date: 2024
-      highlights:
-      - 六人團隊自建 **Infiniband + 多 GPU** 叢集，含 NUMA binding、MPI 調校與 **Prometheus / Grafana** 監控；我負責標準題與應用題的參數優化。
-      - 撰寫自動化腳本記錄並分析參數與效能關聯，調校 **HPL / HPCG** benchmark，並從原始碼建置 PIConGPU 與 NAMD、優化多節點 CUDA 執行參數。
     技術能力:
     - label: 程式語言
       details: Python、C/C++、Java

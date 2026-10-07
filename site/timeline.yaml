@@ -52,3 +52,29 @@
     highlights:
     - Preprocessed multi-platform learning logs with Pandas and Matplotlib into score, action-count and action-sequence features.
     - Predicted score bands with SVM, ANN and XGBoost (81.8% accuracy) and proposed behavior-based early warnings and advice; 3rd of 40+ teams nationwide.
+
+- date: 2026-01
+  zh:
+    name: 基於 LAMBDA 的 HF 資料集擷取器
+    highlights:
+    - 使用 LAMBDA 框架開發多代理流程，**自動擷取**並處理 Hugging Face 資料集。
+    - 建立資料集取得與結構化整理的**自動化流程**，支援 LLM 語料建構。
+    - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
+  en:
+    name: HF Datasets Extractor with LAMBDA
+    highlights:
+    - Built a multi-agent pipeline on the LAMBDA framework to **automatically extract** and process datasets from Hugging Face.
+    - Automated dataset retrieval and structured data preparation for LLM corpus construction.
+    - '[github.com/k7term1a/hf_extractor_LAMBDA](https://github.com/k7term1a/hf_extractor_LAMBDA)'
+
+- date: 2024
+  zh:
+    name: HPC 叢集建置與效能調校（HiPAC 2024 冠軍作品）
+    highlights:
+    - 六人團隊自建 **Infiniband + 多 GPU** 叢集，含 NUMA binding、MPI 調校與 **Prometheus / Grafana** 監控；我負責標準題與應用題的參數優化。
+    - 撰寫自動化腳本記錄並分析參數與效能關聯，調校 **HPL / HPCG** benchmark，並從原始碼建置 PIConGPU 與 NAMD、優化多節點 CUDA 執行參數。
+  en:
+    name: HPC Cluster Setup and Performance Tuning (HiPAC 2024 champion entry)
+    highlights:
+    - Six-person team built an **Infiniband + multi-GPU** cluster with NUMA binding, MPI tuning and **Prometheus / Grafana** monitoring; I owned parameter optimization for the benchmark and application tasks.
+    - Wrote automation scripts to record and analyze parameter-performance relationships, tuned **HPL / HPCG**, and built PIConGPU and NAMD from source with optimized multi-node CUDA settings.
