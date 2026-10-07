@@ -98,9 +98,22 @@ design:
     bottom_margin: 0.9cm
     left_margin: 1.5cm
     right_margin: 1.5cm
+  colors:
+    body: rgb(38, 42, 48)
+    name: rgb(18, 52, 92)
+    headline: rgb(70, 88, 110)
+    connections: rgb(70, 88, 110)
+    section_titles: rgb(18, 52, 92)
+    links: rgb(30, 98, 160)
+    footer: rgb(140, 150, 162)
+    top_note: rgb(140, 150, 162)
   typography:
     font_size:
       body: 9.2pt
+      name: 26pt
+      headline: 10.5pt
+      connections: 9pt
+      section_titles: 1.25em
   entries:
     date_and_location_width: 4.5cm
   section_titles:
