@@ -34,10 +34,18 @@ cv:
       start_date: 2025-03
       end_date: present
       highlights:
-      - Explored recent research on large language models and implemented proof-of-concept experiments
-        on differential privacy and **model merging**.
+      - Conducted an LLM **literature survey** spanning corpus construction, instruction-data selection and
+        synthesis, Traditional Chinese evaluation, catastrophic forgetting and safety alignment; built PoCs
+        on **model merging (mergekit)** and differential privacy.
+      - Built a FineWeb-Edu-style Traditional Chinese educational-text classifier, labeling samples with
+        Llama3-70B and training an EmbeddingGemma-300m classifier.
+      - Self-hosted a gitlab-runner on an NCHC VM and built a **GitLab CI/CD** pipeline that checks Notion
+        records, backs up Hugging Face datasets and writes status back.
       - Designed and implemented a corpus-collection pipeline using the LAMBDA multi-agent framework for
         automated **data extraction** and structured storage.
+      - Connected a Kinetics-600 video action-recognition service to a Dify agent via **MCP**; profiled
+        the latency path and cut end-to-end p50 latency from 26.3 s to **10.8 s (−59%)** while keeping
+        100% top-5 prediction agreement.
     - company: Claireye Intelligence Co.
       position: AI Application Intern
       location: Taiwan
