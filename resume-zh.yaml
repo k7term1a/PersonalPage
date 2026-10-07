@@ -84,12 +84,12 @@ design:
     left_margin: 1.5cm
     right_margin: 1.5cm
   colors:
-    body: rgb(38, 42, 48)
-    name: rgb(18, 52, 92)
-    headline: rgb(70, 88, 110)
-    connections: rgb(70, 88, 110)
-    section_titles: rgb(18, 52, 92)
-    links: rgb(30, 98, 160)
+    body: rgb(0, 0, 0)
+    name: rgb(0, 0, 0)
+    headline: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 0, 0)
+    links: rgb(0, 0, 0)
     footer: rgb(140, 150, 162)
     top_note: rgb(140, 150, 162)
   typography:
