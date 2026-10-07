@@ -17,19 +17,16 @@ cv:
     - institution: National Chung Hsing University
       area: Computer Science and Engineering
       degree: MS
-      location: Taichung, Taiwan
       start_date: 2025-09
       end_date: present
     - institution: National Taichung University of Education
       area: Computer Science and Engineering
       degree: BS
-      location: Taichung, Taiwan
       start_date: 2021-09
       end_date: 2025-06
     experience:
     - company: National Center for High-performance Computing (NCHC)
       position: LLM Model Team Intern
-      location: Taiwan
       start_date: 2025-03
       end_date: present
       highlights:
@@ -42,7 +39,6 @@ cv:
         end-to-end p50 latency from 26.3 s to **10.8 s (−59%)**.
     - company: Claireye Intelligence Co.
       position: AI Application Intern
-      location: Taiwan
       start_date: 2025-02
       end_date: 2025-06
       highlights:

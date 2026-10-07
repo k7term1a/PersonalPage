@@ -15,19 +15,16 @@ cv:
     - institution: 國立中興大學
       area: 資訊工程學系
       degree: 碩士
-      location: 台中
       start_date: 2025-09
       end_date: present
     - institution: 國立台中教育大學
       area: 資訊工程學系
       degree: 學士
-      location: 台中
       start_date: 2021-09
       end_date: 2025-06
     工作經驗:
     - company: 國家高速網路與計算中心（NCHC）
       position: 大型語言模型團隊 實習生
-      location: 台灣
       start_date: 2025-03
       end_date: present
       highlights:
@@ -36,7 +33,6 @@ cv:
       - 以 Dify Agent 透過 **MCP** 串接影片動作辨識服務，分析延遲瓶頸後將端到端延遲 p50 由 26.3 秒降至 **10.8 秒（−59%）**。
     - company: Claireye Intelligence Co.
       position: AI 應用實習生
-      location: 台灣
       start_date: 2025-02
       end_date: 2025-06
       highlights:
