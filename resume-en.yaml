@@ -79,23 +79,23 @@ cv:
       details: Slurm, Kubernetes, Prometheus, Grafana, MPI, CUDA, Infiniband, HPL/HPCG
     awards:
     - label: 1st Place, 2026
-      details: AWS Summit Taipei 2026 AI Hackathon, Shipping & Logistics Track (Yang Ming challenge) — fleet energy-efficiency platform; owned data cleaning and the CatBoost fuel model (3.34% WAPE)
+      details: AWS Summit Taipei 2026 AI Hackathon, Shipping & Logistics Track
     - label: 1st Place, 2026
-      details: 6th Maritime & Port Big Data Innovation Competition, Student Group (Taiwan Maritime and Port Bureau, team SpaceY) — owned the typhoon-evacuation RL and port-resilience NSGA-II subsystems
+      details: 6th Maritime & Port Big Data Innovation Competition, Student Group (Maritime and Port Bureau)
     - label: 3rd Place, 2025
-      details: 4th NCHC HiPAC (High Performance Application Competition) — owned Slurm setup with DCGM/Prometheus/Grafana monitoring, LAMMPS tuning and the SU2 hidden task
+      details: 4th NCHC High Performance Application Competition (HiPAC)
     - label: 1st Place, 2024
-      details: 3rd NCHC HiPAC — GPU/Infiniband cluster setup with HPL, HPCG and NAMD tuning
+      details: 3rd NCHC High Performance Application Competition (HiPAC)
     - label: Silver Award, 2024
-      details: 2024 National Smart Manufacturing Big Data Analysis Competition (IMBD, 70+ teams) — 4-class surface-defect CNN; owned data augmentation and training scripts, F1 0.994
+      details: National Smart Manufacturing Big Data Analysis Competition (IMBD, 70+ teams)
     - label: 3rd Place, 2023
-      details: 2023 Education Big Data Analytics Competition (Ministry of Education, 40+ teams nationwide) — predicting learning outcomes from online learning behavior with early warnings, XGBoost 81.8% accuracy
+      details: Education Big Data Analytics Competition (Ministry of Education, 40+ teams)
 design:
   theme: classic
   page:
     size: a4
-    top_margin: 1.2cm
-    bottom_margin: 1.2cm
+    top_margin: 0.9cm
+    bottom_margin: 0.9cm
     left_margin: 1.5cm
     right_margin: 1.5cm
   typography:
@@ -104,8 +104,8 @@ design:
   entries:
     date_and_location_width: 4.5cm
   section_titles:
-    space_above: 0.45cm
+    space_above: 0.35cm
     space_below: 0.15cm
   sections:
-    space_between_regular_entries: 0.9em
-    space_between_text_based_entries: 0.5em
+    space_between_regular_entries: 0.6em
+    space_between_text_based_entries: 0.3em

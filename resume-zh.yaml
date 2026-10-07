@@ -68,23 +68,23 @@ cv:
       details: Slurm、Kubernetes、Prometheus、Grafana、MPI、CUDA、Infiniband、HPL/HPCG
     獎項與榮譽:
     - label: 第一名（2026）
-      details: AWS Summit Taipei 2026 AI Hackathon 航運物流組（陽明海運題）— 船隊能效決策平台，負責資料清洗與 CatBoost 油耗模型（WAPE 3.34%）
+      details: AWS Summit Taipei 2026 AI Hackathon 航運物流組
     - label: 第一名（2026）
-      details: 第六屆航港大數據創意應用競賽 學生組（交通部航港局，隊名 SpaceY）— 負責颱風撤離 RL 與港口韌性 NSGA-II 兩個子系統
+      details: 第六屆航港大數據創意應用競賽 學生組（交通部航港局）
     - label: 季軍（2025）
-      details: 第四屆國網盃應用程式效能優化競賽（HiPAC 2025）— 負責 Slurm 建置與 DCGM/Prometheus/Grafana 監控、LAMMPS 調參、SU2 隱藏題
+      details: 第四屆國網盃應用程式效能優化競賽（HiPAC）
     - label: 冠軍（2024）
-      details: 第三屆國網盃應用程式效能優化競賽（HiPAC 2024）— GPU/Infiniband 叢集建置與 HPL、HPCG、NAMD 調校
+      details: 第三屆國網盃應用程式效能優化競賽（HiPAC）
     - label: 銀獎（2024）
-      details: 2024 全國智慧製造大數據分析競賽（IMBD，70 餘隊）— 表面瑕疵四分類 CNN，負責資料增強與訓練腳本，F1 0.994
+      details: 全國智慧製造大數據分析競賽（IMBD，70 餘隊）
     - label: 第三名（2023）
-      details: 2023 教育大數據分析競賽（教育部，全國 40 餘隊）— 以線上學習行為預測學習成效並提供預警，XGBoost 準確率 81.8%
+      details: 教育大數據分析競賽（教育部，全國 40 餘隊）
 design:
   theme: classic
   page:
     size: a4
-    top_margin: 1.2cm
-    bottom_margin: 1.2cm
+    top_margin: 0.9cm
+    bottom_margin: 0.9cm
     left_margin: 1.5cm
     right_margin: 1.5cm
   typography:
@@ -98,11 +98,11 @@ design:
   entries:
     date_and_location_width: 4.5cm
   section_titles:
-    space_above: 0.45cm
+    space_above: 0.35cm
     space_below: 0.15cm
   sections:
-    space_between_regular_entries: 0.9em
-    space_between_text_based_entries: 0.5em
+    space_between_regular_entries: 0.6em
+    space_between_text_based_entries: 0.3em
 locale:
   language: mandarin_chinese
   last_updated: 最後更新於
